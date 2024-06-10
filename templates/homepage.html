@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>All Projects</h1>
+    <ul class="project-list">
+        {% for project in projects %}
+            <li><a href="{{ url_for('project', project_id=project['projectId']) }}">{{ project['projectTitle'] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

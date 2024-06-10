@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ project.projectTitle }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="project-details">
+        <h1>{{ project.projectTitle }}</h1>
+        <p>Website Name: {{ project.websiteName }}</p>
+        <p>Project ID: {{ project.projectId }}</p>
+        <p>Project Web Link: <a href="{{ project.projectWebLink }}">{{ project.projectWebLink }}</a></p>
+        <!-- You can add more project details here -->
+    </div>
+</body>
+</html>
